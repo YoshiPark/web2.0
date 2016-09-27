@@ -11,8 +11,9 @@ body {
     padding: 0;
 }
 
-.banner img {
-    width: 100%;
+.banner {
+    background-image: url(../img/bannerbackground.png);
+    background-repeat: repeat-x;
     height: 50px;
 }
 
@@ -25,10 +26,10 @@ h1 {
 
 .all {
     width: 800px;
+    border: 4px solid gray;
     display: block;
     margin: auto;
     overflow: hidden;
-    border: 4px solid gray;
 }
 
 .right_border {
@@ -57,28 +58,34 @@ h1 {
 
 .review_flag {
     background-image: url(../img/rottenbackground.png);
+    background-repeat: repeat-x;
+    height: 83px;
 }
 
-span {
-    vertical-align: 13px;
+.review_flag img {
+    float: left;
+    vertical-align: bottom;
 }
 
 .review_flag .percentage {
     color: red;
     font-size: 48pt;
     font-weight: bold;
+    vertical-align: bottom;
 }
 
 .review_flag .total_reviews {
     color: white;
     font-size: 8pt;
     font-weight: lighter;
+    vertical-align: 13px;
 }
 
 .column {
     float: left;
-    margin-left: 11px;
-    margin-top: 9px;
+    margin-left: 2%;
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 47%;
 }
 
@@ -118,14 +125,18 @@ span {
 }
 
 .footer {
-    clear: both;
+    clear: right;
     padding: 5px;
     background-color: #A2B964;
     text-align: center;
 }
 
+.all_page {
+    position: relative;
+}
+
 .two_end {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     right: 0;
 }

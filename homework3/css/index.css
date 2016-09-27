@@ -1,0 +1,274 @@
+/*
+  Author: Yoshi Park
+  introduction: this css is for index.html
+  说明:1.使用了Linux 取色工具 gcolor2,截取颜色时候有可能因为图片分辨率产生误差.
+  2.该css可能在比IE10低的IE版本无法显示出应有的效果.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+    font-weight: bold;
+}
+
+
+/* 首先对bottom-positioner类进行定义,即确定@+环形菜单出现的大概位置 */
+
+#bottom-positioner {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+}
+
+
+/* 接着对bottom-positioner的子元素button类进行定义,它的位置特征继承父元素bottom-positioner*/
+
+#button {
+    position: inherit;
+}
+
+
+/* 接着对button的子元素info-bar类进行定义,确定它的位置大小以及css3的一些特性 */
+
+#info-bar {
+    position: absolute;
+    width: 128px;
+    height: 128px;
+    left: -35px;
+    top: -40px;
+    background-color: rgb(126, 126, 126);
+    border-radius: 50%;
+    transform: scale(0) translateY(0);
+    -ms-transform: scale(0) translateY(0);
+    -webkit-transform: scale(0) translateY(0);
+    -o-transform: scale(0) translateY(0);
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    transition-delay: 0.8s;
+    -moz-transition-delay: 0.8s;
+    -webkit-transition-delay: 0.8s;
+    -o-transition-delay: 0.8s;
+}
+
+
+/* 对info-bar下面的info类进行定义 */
+
+.info {
+    text-align: center;
+}
+
+.info span {
+    margin-left: 7px;
+}
+
+.info img {
+    vertical-align: -5px;
+}
+
+
+/* 对info-bar里面的无序列表ul定义 */
+
+ul {
+    list-style-type: none;
+}
+
+li.page {
+    margin: 10px auto 10px auto;
+    color: white;
+}
+
+li.mine {
+    display: inline-block;
+    color: rgb(51, 209, 157);
+}
+
+li.comment {
+    font-size: 20pt;
+}
+
+
+/*对button子元素apb进行定义,它的位置特征继承父元素button */
+
+.apb {
+    position: inherit;
+}
+
+
+/*对apb子元素icon进行定义*/
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: url(../images/atplus_white.png) no-repeat #959BD1;
+    background-position: center;
+    background-size: 90%;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    transition-delay: 0.8s;
+    -moz-transition-delay: 0.8s;
+    -webkit-transition-delay: 0.8s;
+    -o-transition-delay: 0.8s;
+}
+
+
+/* 当鼠标触碰到icon时候动画效果的处理 */
+
+#button:hover .icon {
+    background: url(../images/atplus_green.png) no-repeat #3038A4;
+    background-position: center;
+    background-size: 70%;
+    transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -webkit-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transform: scale(2);
+    -ms-transform: scale(2);
+    -webkit-transform: scale(2);
+    -o-transform: scale(2);
+}
+
+#button:hover #info-bar {
+    transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -webkit-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    opacity: 1;
+    transform: scale(2) translateY(-95px);
+    -ms-transform: scale(2) translateY(-95px);
+    -webkit-transform: scale(2) translateY(-95px);
+    -o-transform: scale(2) translateY(-95px);
+}
+
+.mask {
+    background: url(../images/nomask.png) no-repeat;
+    transition-delay: 0.8s;
+    -moz-transition-delay: 0.8s;
+    -webkit-transition-delay: 0.8s;
+    -o-transition-delay: 0.8s;
+}
+
+#button:hover .mask {
+    transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -webkit-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    opacity: 1;
+    transform: scale(1) translateY(-50px) translateX(-85px);
+    -ms-transform: scale(1) translateY(-50px) translateX(-85px);
+    -webkit-transform: scale(1) translateY(-50px) translateX(-85px);
+    -o-transform: scale(1) translateY(-50px) translateX(-85px);
+}
+
+.history {
+    background: url(../images/history.png) no-repeat;
+    transition-delay: 0.8s;
+    -moz-transition-delay: 0.8s;
+    -webkit-transition-delay: 0.8s;
+    -o-transition-delay: 0.8s;
+}
+
+#button:hover .history {
+    transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -webkit-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    opacity: 1;
+    transform: scale(1) translateY(5px) translateX(-115px);
+    -ms-transform: scale(1) translateY(5px) translateX(-115px);
+    -webkit-transform: scale(1) translateY(5px) translateX(-115px);
+    -o-transform: scale(1) translateY(5px) translateX(-115px);
+}
+
+.message {
+    background: url(../images/message.png) no-repeat;
+    transition-delay: 0.8s;
+    -moz-transition-delay: 0.8s;
+    -webkit-transition-delay: 0.8s;
+    -o-transition-delay: 0.8s;
+}
+
+#button:hover .message {
+    transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -webkit-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    opacity: 1;
+    transform: scale(1) translateY(58px) translateX(-88px);
+    -ms-transform: scale(1) translateY(58px) translateX(-88px);
+    -webkit-transform: scale(1) translateY(58px) translateX(-88px);
+    -o-transform: scale(1) translateY(58px) translateX(-88px);
+}
+
+.setting {
+    background: url(../images/setting.png) no-repeat;
+    transition-delay: 0.8s;
+    -moz-transition-delay: 0.8s;
+    -webkit-transition-delay: 0.8s;
+    -o-transition-delay: 0.8s;
+}
+
+#button:hover .setting {
+    transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -webkit-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    opacity: 1;
+    transform: scale(1) translateY(100px) translateX(-35px);
+    -ms-transform: scale(1) translateY(100px) translateX(-35px);
+    -webkit-transform: scale(1) translateY(100px) translateX(-35px);
+    -o-transform: scale(1) translateY(100px) translateX(-35px);
+}
+
+.sign {
+    background: url(../images/signin.png) no-repeat;
+    transition-delay: 0.8s;
+    -moz-transition-delay: 0.8s;
+    -webkit-transition-delay: 0.8s;
+    -o-transition-delay: 0.8s;
+}
+
+#button:hover .sign {
+    transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -webkit-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    opacity: 1;
+    transform: scale(1) translateY(95px) translateX(28px);
+    -ms-transform: scale(1) translateY(95px) translateX(28px);
+    -webkit-transform: scale(1) translateY(95px) translateX(28px);
+    -o-transform: scale(1) translateY(95px) translateX(28px);
+}
+
+.button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(103, 103, 103);
+    background-position: center;
+    position: absolute;
+    left: -3px;
+    top: -3px;
+    background-size: 50%;
+    opacity: 0;
+    -webkit-transform: scale(0) translateY(0) translateX(0);
+    -webkit-transition-duration: 0.4s;
+}
+
+
+/* 对未读消息红色框的处理 */
+
+span.unread {
+    display: block;
+    background-color: red;
+    border-radius: 50%;
+    right: -30px;
+    top: -5px;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    font-size: 15pt;
+    color: white;
+}
